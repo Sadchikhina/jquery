@@ -3,8 +3,25 @@
   <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/myjs.js"></script>
+    <script type="text/javascript" src="js/myjs.js"></script>
 <script>
+$(document).ready(function(){
+  $(".box__btn").click(function(){
+    $(".box--1").fadeOut(2000)
+      .fadeIn(2000);
+    $(".box--2").animate({
+      width: '350px',
+    });
+    $(".box--3").animate({
+      backgroundColor: '#f4bd37',
+      left: '250px',
+      width: '150px'
+    });
+    $(".box__text--3").animate({
+      color: '#3784f4'
+    });
+  });
+});
 
 </script>
 
@@ -12,8 +29,14 @@
     <title></title>
   </head>
   <body>
-    <div class="box">
-      <p class="box__text">Hello, everybody!</p>
+    <div class="box box--1">
+      <p class="box__text box__text--1">Hello, everybody!</p>
+    </div>
+    <div class="box box--2">
+      <p class="box__text box__text--2">Hello, everybody!</p>
+    </div>
+    <div class="box box--3">
+      <p class="box__text box__text--3">Hello, everybody!</p>
     </div>
     <button class="box__btn" type="button" name="button">click me</button>
   </body>

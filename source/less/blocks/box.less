@@ -1,19 +1,48 @@
 .box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 250px;
   height: 100px;
-  background-color: @blue;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  &--1 {
+    background-color: @blue;
+  }
+
+  &--2 {
+    background-color: @yellow;
+  }
+
+  &--3 {
+    background-color: @grey;
+  }
 }
 
 .box__text {
   font-size: 22px;
   font-weight: bold;
-  color: @white;
+
+  &--1 {
+    color: @white;
+  }
+
+  &--2 {
+    color: @blue;
+  }
+
+  &--3 {
+    color: @yellow;
+  }
 }
 
 .box__btn {
-  width: 100%;
+  width: 250px;
+  background-color: @blue;
+  border: 1px solid @blue-dark;
+  font-size: 20px;
+  font-weight: bold;
+  color: @white;
+  margin: 0;
 }
